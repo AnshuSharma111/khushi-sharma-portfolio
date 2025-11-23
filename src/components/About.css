@@ -1,0 +1,40 @@
+.about {
+  background-color: var(--color-background);
+}
+
+.about-content {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.about h2 {
+  text-align: center;
+  margin-bottom: var(--space-2xl);
+  color: var(--color-text);
+}
+
+.about p {
+  font-size: var(--text-base);
+  line-height: 1.6;
+  color: var(--color-text);
+  margin-bottom: 0;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .about-content {
+    max-width: 100%;
+  }
+  
+  .about h2 {
+    margin-bottom: var(--space-xl);
+  }
+}
+
+@media (max-width: 575px) {
+  .about p {
+    font-size: var(--text-sm);
+    line-height: 1.5;
+  }
+}

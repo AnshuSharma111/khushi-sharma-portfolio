@@ -1,0 +1,111 @@
+.activities {
+  background-color: var(--color-background);
+}
+
+.activities-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.activities h2 {
+  text-align: center;
+  margin-bottom: var(--space-2xl);
+  color: var(--color-text);
+}
+
+.activities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--space-2xl);
+}
+
+.activity-item {
+  padding: var(--space-xl);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+  transition: all var(--transition-fast);
+  position: relative;
+  overflow: hidden;
+}
+
+.activity-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.activity-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, #8e44ad, #9b59b6);
+  transition: left 0.6s ease;
+  border-radius: var(--border-radius) var(--border-radius) 0 0;
+}
+
+.activity-item:hover::before {
+  left: 100%;
+}
+
+.activity-item h3 {
+  margin-bottom: var(--space-sm);
+  color: var(--color-text);
+}
+
+.role {
+  font-weight: 600;
+  color: #c0392b;
+  margin-bottom: var(--space-md);
+  font-size: var(--text-sm);
+}
+
+.activity-item .description {
+  color: var(--color-text);
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+/* Tablet responsive */
+@media (max-width: 992px) {
+  .activities-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--space-xl);
+  }
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .activities-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+  
+  .activity-item {
+    padding: var(--space-lg);
+  }
+}
+
+@media (max-width: 575px) {
+  .activities-grid {
+    gap: var(--space-md);
+  }
+  
+  .activity-item {
+    padding: var(--space-md);
+  }
+  
+  .activity-item h3 {
+    font-size: var(--text-base);
+  }
+  
+  .role {
+    font-size: var(--text-xs);
+  }
+  
+  .activity-item .description {
+    font-size: var(--text-xs);
+    line-height: 1.5;
+  }
+}

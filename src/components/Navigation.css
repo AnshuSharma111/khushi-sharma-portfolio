@@ -1,0 +1,119 @@
+.navigation {
+  padding: var(--space-md) 0;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  backdrop-filter: blur(0px);
+  -webkit-backdrop-filter: blur(0px);
+}
+
+.navigation.scrolled {
+  padding: var(--space-sm) 0;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+.nav-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-brand button {
+  font-family: var(--font-serif);
+  font-size: var(--text-xl);
+  font-weight: 600;
+  color: var(--color-text);
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color var(--transition-fast);
+}
+
+.nav-brand button:hover {
+  color: var(--color-accent);
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: var(--space-xl);
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links button {
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  color: var(--color-text);
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color var(--transition-fast);
+  position: relative;
+}
+
+.nav-links button:hover {
+  color: var(--color-accent);
+}
+
+.nav-links button::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 50%;
+  background: linear-gradient(90deg, #c0392b, #e74c3c);
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transform: translateX(-50%);
+  border-radius: 1px;
+}
+
+.nav-links button:hover::after {
+  width: 100%;
+}
+
+.nav-links button {
+  transform: translateY(0);
+  transition: all 0.3s ease;
+}
+
+.nav-links button:hover {
+  transform: translateY(-1px);
+}
+
+/* Tablet responsive */
+@media (max-width: 992px) {
+  .nav-links {
+    gap: var(--space-lg);
+  }
+  
+  .nav-links button {
+    font-size: var(--text-xs);
+  }
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+  
+  .nav-brand button {
+    font-size: var(--text-lg);
+  }
+  
+  .navigation {
+    padding: var(--space-sm) 0;
+  }
+  
+  .navigation.scrolled {
+    padding: var(--space-xs) 0;
+  }
+}
+
+@media (max-width: 575px) {
+  .nav-brand button {
+    font-size: var(--text-base);
+  }
+}

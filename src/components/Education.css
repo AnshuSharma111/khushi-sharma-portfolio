@@ -1,0 +1,84 @@
+.education {
+  background-color: rgba(44, 62, 80, 0.02);
+}
+
+.education-content {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.education h2 {
+  text-align: center;
+  margin-bottom: var(--space-2xl);
+  color: var(--color-text);
+}
+
+.education-item {
+  margin-bottom: var(--space-2xl);
+  padding-bottom: var(--space-2xl);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.education-item:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.education-item h3 {
+  margin-bottom: var(--space-sm);
+  color: var(--color-text);
+}
+
+.institution {
+  font-weight: 600;
+  color: #c0392b;
+  margin-bottom: var(--space-xs);
+}
+
+.duration {
+  color: var(--color-text-light);
+  font-size: var(--text-sm);
+  margin-bottom: var(--space-md);
+}
+
+.details {
+  color: var(--color-text);
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .education-content {
+    max-width: 100%;
+  }
+  
+  .education h2 {
+    margin-bottom: var(--space-xl);
+  }
+  
+  .education-item {
+    margin-bottom: var(--space-xl);
+    padding-bottom: var(--space-xl);
+  }
+}
+
+@media (max-width: 575px) {
+  .education-item h3 {
+    font-size: var(--text-base);
+  }
+  
+  .institution {
+    font-size: var(--text-sm);
+  }
+  
+  .duration {
+    font-size: var(--text-xs);
+  }
+  
+  .details {
+    font-size: var(--text-sm);
+    line-height: 1.5;
+  }
+}
