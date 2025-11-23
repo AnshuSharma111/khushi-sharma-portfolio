@@ -8,7 +8,7 @@ This is a simple React App. Follow the given steps:
 
 1. Clone the repository
 
-> git clone
+> git clone https://github.com/AnshuSharma111/khushi-sharma-portfolio.git
 
 2. Install the dependencies
 
